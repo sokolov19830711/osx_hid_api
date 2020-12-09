@@ -1,10 +1,11 @@
 #include "rs_hid.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int main(int argc, const char * argv[]) {
     int ret;
-    rs_hid_device_info *devices = RS_hid_Enumerate(0x8086, 0x0b3a);
+    rs_hid_device_info *devices = RS_hid_Enumerate(0x8086, 0x0);
     
     if (devices == NULL) {
         printf("can't find any real sense devices\n");

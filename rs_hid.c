@@ -1,5 +1,7 @@
 #include "rs_hid.h"
 
+#include <string.h>
+
 rs_hid_device_info *RS_hid_Enumerate(unsigned short vendorId, unsigned short ProductId) {
     return (rs_hid_device_info *) hid_enumerate(vendorId, ProductId);
 }
